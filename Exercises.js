@@ -54,8 +54,14 @@ function myPower(x, n) {
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-  
-  return "";
+  for(var i = 1; i < str.length; i++){
+    var letter = str.substring(i, i + 1);
+    console.log('letter = ' +letter);
+    var next_position = str.indexOf(letter, i+1);
+    if (next_position === -1) {
+      return letter;
+    }
+  }
 }
 
 //Question 6 (Bonus)
