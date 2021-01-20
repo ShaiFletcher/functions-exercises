@@ -21,7 +21,6 @@ function allCombinations(str) {
       if (text !== "") {
         combinations.push(text);
       }
-      console.log('i=' + i + ', j=' + j + ', text = ' + text + ', len=' + len);
     }
     pos++
   }
@@ -32,18 +31,30 @@ function allCombinations(str) {
 //Question 3
 function allCaps(str) {
   // your code here
-  return "";
+  const words = str.split(" ");
+  var sentence = "";
+
+for (let i = 0; i < words.length; i++) {
+    sentence += words[i][0].toUpperCase() + words[i].substr(1) + " ";
+}
+  sentence = sentence.trim();
+  return sentence;
 }
 
 //Question 4
 function myPower(x, n) {
   // your code here
-  return "";
+  let ans = x;
+  for(var i = 1; i < n; i++) {
+    ans * x; 
+  }
+  return ans;
 }
 
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
+  
   return "";
 }
 
